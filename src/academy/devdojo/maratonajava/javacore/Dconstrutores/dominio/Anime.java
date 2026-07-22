@@ -8,7 +8,7 @@ public class Anime {
     private String studio;
 
     public Anime(String nome, String tipo, int episodios, String genero){
-        System.out.println("Dentro do construtor");
+        this();
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
@@ -16,7 +16,12 @@ public class Anime {
     }
 
     public Anime(String nome, String tipo, int episodios, String genero, String studio){
+        this(nome, tipo, episodios, genero);
+        this.studio = studio;
+    }
 
+    public Anime() {
+        System.out.println("Construtor sem argumentos");
     }
 
     public void imprime() {
@@ -24,6 +29,7 @@ public class Anime {
         System.out.println(this.tipo);
         System.out.println(this.episodios);
         System.out.println(this.genero);
+        System.out.println(this.studio);
     }
 
     public void init(String nome, String tipo, int episodios) {
